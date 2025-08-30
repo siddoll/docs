@@ -3,7 +3,7 @@
   "theme": "mint",
   "name": "Typelense",
   "colors": {
-    "primary": "4D43FE",
+    "primary": "#4D43FE",
     "light": "#07C983",
     "dark": "#15803D"
   },

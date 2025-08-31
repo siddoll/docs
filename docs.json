@@ -58,25 +58,25 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "anchor": "Announcements",
+          "href": "https://typelense.io/",
           "icon": "book-open-cover"
         },
         {
-          "anchor": "Community",
-          "href": "https://mintlify.com/community",
+          "anchor": "Status",
+          "href": "https://status.typelense.io/",
           "icon": "slack"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "anchor": "Feature Requests",
+          "href": "https://app.typelense.io/feature-requests",
           "icon": "newspaper"
         }
       ]
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
+    "light": "/logo/typelense_logo.svg",
     "dark": "/logo/dark.svg"
   },
   "navbar": {

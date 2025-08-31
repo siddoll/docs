@@ -3,7 +3,6 @@ title: "Getting Started with LenseAI"
 description: "LenseAI User Journey — from upload to final on-model image, credits, and generation flow"
 ---
 
-
 <Frame>
   <img
     src="https://mintlify-assets.b-cdn.net/bigbend.jpg"
@@ -89,7 +88,7 @@ One garment per file (avoid collages), neutral background recommended
       <Accordion title="Start generation">
         - **Project selection:** choose an existing project or **create new** to store results
         - **Credit verification:** system confirms sufficient balance
-        - **Generation:** initiates **LenseAI** pipeline with **Gemini AI**
+        - **Generation:** initiates **LenseAI** pipeline.
       </Accordion>
     </AccordionGroup>
   </Step>
@@ -104,7 +103,7 @@ Progress bar with percentage and live elapsed time
 Statuses:
 
 - Analyzing Product — AI garment analysis & prompt building
-- Generating Image — base image creation (Gemini)
+- Generating Image — base image creation 
 - Enhancing Quality — upscaling & refinements
 
 Cancel option: users can cancel an in-flight job
@@ -126,19 +125,7 @@ Immediate access to generated images
 
 Downloads: multiple formats and resolutions
 
-Quality versions: original + upscaled variants
-
-## Technical architecture (at a glance)
-
-Frontend: React + TypeScript, responsive UI, image preloading, real-time polling
-
-Backend: Supabase Edge Functions orchestrate AI processing
-
-AI: Google Gemini for image generation
-
-Enhancement: external upscaling service
-
-Credits & Billing: Stripe-backed credit system (1 credit = 1 image)
+Quality versions: original \+ upscaled variants
 
 ## Accessibility & reliability
 
@@ -161,7 +148,8 @@ Credit efficiency: credits per successful output
 Performance: average time from upload → final image
 
 <Tip>
-   Next up: learn about <a href="/introduction/plans-and-credits">
-  Plans & Credits
-  </a> to choose the right subscription and manage your balance. 
+  Next up: learn about <a href="/introduction/plans-and-credits">
+  Plans & Credits</a>
+
+   to choose the right subscription and manage your balance.
 </Tip>

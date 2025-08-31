@@ -1,0 +1,167 @@
+---
+title: "Getting Started with LenseAI"
+description: "LenseAI User Journey — from upload to final on-model image, credits, and generation flow"
+---
+
+
+<Frame>
+  <img
+    src="https://mintlify-assets.b-cdn.net/bigbend.jpg"
+    alt="LenseAI overview"
+    className="rounded-lg"
+  />
+</Frame>
+
+## Overview
+
+Guided flow with a step-by-step progress indicator:
+Select Products → Select Model → Select Poses → Select Background → Summary
+
+Users can navigate back to completed steps at any time.
+
+Optimized for desktop and mobile, with real-time status updates during generation.
+
+## Prerequisites
+
+Active Typelense account and available credits
+
+Product images in JPG / PNG / WEBP, up to 10 MB, sRGB
+
+One garment per file (avoid collages), neutral background recommended
+
+## Step-by-step workflow
+
+<Steps>
+  <Step title="Step 1 — Product upload & analysis">
+    <AccordionGroup>
+      <Accordion title="Primary upload flow">
+        - **Upload methods:** drag-and-drop or file picker
+        - **Validation:** JPG/PNG/WEBP up to 10 MB
+        - **AI analysis:** auto-detects clothing **type** and **category** (upper / lower / dress / under)
+        - **Results shown:** detected type & category, **confidence score**, **text/logo detection**
+        - **UI:** professional scanning animation during processing
+      </Accordion>
+      <Accordion title="Complementary garment (optional)">
+        - **Trigger:** suggested when the primary garment implies a set (e.g., top → recommend bottom)
+        - **Options:**
+          - Upload a complementary garment
+          - Select from **predefined garment library**
+          - Skip
+        - **Smart suggestions:** recommended types based on the primary category
+        - **Validation:** same AI checks as the primary garment
+      </Accordion>
+    </AccordionGroup>
+  </Step>
+  <Step title="Step 2 — Model selection">
+    - **Gallery:** grid with optimized previews & metadata (name, age, gender)
+    - **Filters:** gender, age ranges (18–25, 26–35, 36–45, 46–55), hair color, ethnicity
+    - **Indicators:** pro/premium labels
+    - **Favorites:** star models for quick access
+    - **Performance:** caching & preloading for smooth browsing
+    - **Selection:** choose **one** model; visual confirmation on selection
+  </Step>
+  <Step title="Step 3 — Pose selection">
+    - **Dynamic loading:** poses fetched for the **selected model**
+    - **Display:** 9:16-optimized grid
+    - **Auto-selection:** first pose is preselected when a model is chosen
+    - **Validation:** pose/model compatibility checks
+    - **Performance:** prioritized loading for visible poses
+  </Step>
+  <Step title="Step 4 — Background selection">
+    - **Categories:** Studio, Outdoor, Lifestyle, etc.
+    - **Preview:** high-quality thumbnails with style names
+    - **Pro assets:** premium backgrounds clearly marked
+    - **Selection:** single background with instant visual feedback
+    - **Admin:** background management tools available for administrators
+  </Step>
+  <Step title="Step 5 — Summary & generation">
+    <AccordionGroup>
+      <Accordion title="Configuration review">
+        - **Visual summary:** side-by-side of product(s), selected **model pose**, and **background**
+        - **Details shown:**
+          - Model info & preview
+          - Pose name/preview
+          - Background style
+          - Garment analysis (type, category, text detection)
+        - **Credits:** real-time calculation (**1 credit per image**)
+        - **Validation:** checks that all selections are complete
+      </Accordion>
+      <Accordion title="Start generation">
+        - **Project selection:** choose an existing project or **create new** to store results
+        - **Credit verification:** system confirms sufficient balance
+        - **Generation:** initiates **LenseAI** pipeline with **Gemini AI**
+      </Accordion>
+    </AccordionGroup>
+  </Step>
+</Steps>
+
+## Generation progress & monitoring
+
+### Real-time tracking
+
+Progress bar with percentage and live elapsed time
+
+Statuses:
+
+- Analyzing Product — AI garment analysis & prompt building
+- Generating Image — base image creation (Gemini)
+- Enhancing Quality — upscaling & refinements
+
+Cancel option: users can cancel an in-flight job
+
+Errors: clear messages with suggested actions and retry guidance
+
+### Phases under the hood
+
+- AI Analysis: product understanding & constraints
+- Image Generation: base on-model render
+- Upscaling: automatic enhancement via external service
+- Storage: final asset saved to Supabase with metadata
+
+### Results & completion
+
+Auto-redirect to the project detail page on completion
+
+Immediate access to generated images
+
+Downloads: multiple formats and resolutions
+
+Quality versions: original + upscaled variants
+
+## Technical architecture (at a glance)
+
+Frontend: React + TypeScript, responsive UI, image preloading, real-time polling
+
+Backend: Supabase Edge Functions orchestrate AI processing
+
+AI: Google Gemini for image generation
+
+Enhancement: external upscaling service
+
+Credits & Billing: Stripe-backed credit system (1 credit = 1 image)
+
+## Accessibility & reliability
+
+Accessibility: screen-reader labels, keyboard navigation, focus states
+
+State persistence: progress is preserved across sessions
+
+Error recovery: informative modals, safe retries, and non-blocking validation
+
+## Metrics that matter
+
+Completion rate: % of users finishing the 5-step flow
+
+Generation success: error-free outputs per attempt
+
+User satisfaction: perceived quality of generated images
+
+Credit efficiency: credits per successful output
+
+Performance: average time from upload → final image
+
+<Tip>
+   Next up: learn about <a href="/introduction/plans-and-credits">
+  Plans & Credits
+  </a> to choose the right subscription and manage your balance. 
+</Tip>

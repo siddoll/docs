@@ -1,0 +1,71 @@
+---
+title: "FAQ"
+description: "Willkommen! Hier findest du kurze, aufklappbare Antworten zu Setup, Workflow, Qualität, Recht & API."
+---
+
+
+<AccordionGroup>
+  <Accordion title="Was ist Typelense?">
+    Typelense ist eine AI-Produktfoto- und VTON-Plattform für Fashion & E-Commerce. Du lädst Garments hoch, wählst Model & Pose, optional einen Hintergrund – und erhältst konsistente, realistische Produktbilder für Shop, Social & Ads.
+  </Accordion>
+  <Accordion title="Für wen ist Typelense gedacht?">
+    Für D2C-Brands, Marktplatz-Seller, Agenturen und Studios, die große Bildmengen schnell, konsistent und kosteneffizient produzieren möchten – inkl. Kampagnen-Visuals, On-Model, Ghost-Mannequin, Flat-Lay-Upgrades und Creative Variationen.
+  </Accordion>
+  <Accordion title="Wie läuft eine typische Generierung ab?">
+    1. **Garments hochladen** (Top/Bottom/Set)
+    2. **Model auswählen** (aus Galerie oder Brand-Model)
+    3. **Pose fixieren** (Pose bleibt 1:1 erhalten)
+    4. **Hintergrund wählen** (Studio, Location, Gradient oder eigener Upload)
+    5. **Rendern & Varianten prüfen** (Batch/Serie möglich)
+  </Accordion>
+  <Accordion title="Bleibt die Pose wirklich unverändert?">
+    Ja. Die ausgewählte Pose wird **1:1 beibehalten**. Es ändern sich nur Kleidung und Hintergrund – ideal für Vergleichbarkeit in Katalogen.
+  </Accordion>
+  <Accordion title="Welche Datei-Formate & -Qualitäten soll ich hochladen?">
+    **PNG** oder **JPG**, sRGB. Empfohlen: **saubere Freisteller** oder klare Flat-Lay/On-Hanger-Fotos, eine Garment-Ansicht pro Datei, wenig Falten/Reflexe, keine Collagen. Höhere Auflösung ⇒ bessere Details & Kanten.
+  </Accordion>
+  <Accordion title="Welche Bildformate & Auflösungen bekomme ich?">
+    Übliche Seitenverhältnisse: **1:1**, **4:5**, **3:4**, **2:3**, **9:16**. Ideal für Shops, Social & Ads. Optionaler **Upscale** für hochauflösende Exporte. (Projekt-weite Defaults sind konfigurierbar.)
+  </Accordion>
+  <Accordion title="Wie gut ist die Garment-Treue (Logos, Muster, Stoffe)?">
+    Sehr hoch – insbesondere bei klaren Input-Fotos. Achte auf: gleichmäßiges Licht, sichtbare Textur, keine starken Kompressionsartefakte. Extrem feine Muster (Moiré), stark spiegelnde oder transparente Stoffe sind naturgemäß anspruchsvoller.
+  </Accordion>
+  <Accordion title="Unterwäsche/Swimwear erlaubt?">
+    Ja, **sofern nicht explizit** und mit Fokus auf Produktdarstellung. **Keine Minderjährigen**, keine sexualisierten Inhalte. Wir behalten uns Moderation bei Verstößen gegen Richtlinien vor.
+  </Accordion>
+  <Accordion title="Wie sieht es mit Wasserzeichen/AI-Kennzeichnungen aus?">
+    Typelense **fügt keine sichtbaren Wasserzeichen** hinzu. Manche zugrunde liegenden Modelle können **unsichtbare Wasserzeichen/Signaturen** einbetten. Wir **entfernen oder manipulieren** solche Signale **nicht**.
+  </Accordion>
+  <Accordion title="Wem gehören die generierten Bilder?">
+    Grundsätzlich dir, **sofern** du die Rechte an den Eingaben (Garments, Referenzen, Logos) besitzt. Du erhältst **kommerzielle Nutzung** für die generierten Assets. Bitte beachte zusätzlich die Lizenzbedingungen der verwendeten Model-/Asset-Quellen in deinem Projekt.
+  </Accordion>
+  <Accordion title="Trainiert ihr mit meinen Uploads?">
+    **Nein, ohne Opt-in nicht.** Projekt-Assets werden ausschließlich zur Erbringung des Services genutzt. Optionales **Brand-Fine-Tuning** (z. B. eigenes Brand-Model) ist **Opt-in** und vertraglich geregelt.
+  </Accordion>
+  <Accordion title="Wo werden Daten verarbeitet & wie lang gespeichert?">
+    Speicherung nur so lange wie für den Service notwendig (Render, Review, Re-Use) oder gemäß Vertrag. **Löschen** ist jederzeit pro Asset/Job möglich. **Enterprise**: Optionen für **verkürzte Aufbewahrung**, kundenspezifische **Data-Residency** und **AVV/DPA**.
+  </Accordion>
+  <Accordion title="Wie werden Credits/Preise berechnet?">
+    Abrechnung **pro Generierung/Variante** (und ggf. Upscale). Fehlgeschlagene Jobs werden **nicht** berechnet. Volumen-Pläne & Enterprise-Pakete verfügbar.
+  </Accordion>
+  <Accordion title="Was kann ich tun, wenn Qualität/Passform nicht stimmt?">
+    - **Input verbessern**: höher aufgelöst, ein Garment pro Datei, klare Kanten
+    - **Pose prüfen**: starke Selbstüberdeckungen vermeiden, Pose 1:1 fixieren
+    - **Hintergrund vereinfachen**: für Kataloge Studio/Gradient nutzen
+    - **Mehr Varianten**: 4–8 Varianten erhöhen die Trefferquote
+
+    Wenn es hakt, sende uns **Job-ID & Beispiel** – wir debuggen mit dir.
+  </Accordion>
+  <Accordion title="Wie sichere ich Serien-Konsistenz (Katalog-Look)?">
+    Lege **Projekt-Presets** fest (Pose-Set, Licht, Hintergrund, Ratio) und nutze **gleichartige Inputs** pro Kategorie. Wiederhole Presets für alle Produkte einer Serie.
+  </Accordion>
+  <Accordion title="Welche Compliance-Themen deckt ihr ab (EU AI Act, Datenschutz)?">
+    Wir arbeiten nach **Privacy-by-Design**, bieten **AVV/DPA**, rollenbasierte Zugriffssteuerung und Content-Moderation. **Enterprise**: zusätzliche Kontrollen (z. B. Audit-Logs, Data-Residency, Pen-Tests) auf Anfrage.
+  </Accordion>
+  <Accordion title="Bietet ihr Enterprise-Features (SLA, SSO, Rollen)?">
+    Ja. **SLA**, **SSO (SAML/OIDC)**, feingranulare **Rollen/Rechte**, dedizierte Umgebungen, Custom Quotas & Support-Kanäle sind verfügbar.
+  </Accordion>
+  <Accordion title="Wie erreiche ich Support?">
+    Im Produkt über **Help → Support**, per E-Mail [**hello@typelense.io**](mailto:hello@typelense.io) oder via geteiltem Slack-Channel (Enterprise). Bitte immer **Projekt/Job-ID** mitschicken.
+  </Accordion>
+</AccordionGroup>

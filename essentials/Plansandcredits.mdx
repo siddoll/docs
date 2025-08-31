@@ -1,0 +1,210 @@
+---
+
+title: "Plans & Credits"
+description: "Typelense is a subscription-based service with a free plan and three paid tiers. Image generation uses credits. This page explains plans, pricing, credit logic, and billing."
+icon: "coins"
+-------------
+
+<Callout type="warning">
+Numbers below are example prices for documentation and UI copy. Final prices are defined in Stripe and can vary by region, tax/VAT, and promotions.
+</Callout>
+
+## Feature comparison
+
+### Free plan
+
+* **8 credits** at signup (one-time)
+* Watermarked images
+* Limited AI model selection
+* Standard resolution
+* Basic support
+
+### Starter
+
+* **Monthly credits** based on package (20–50)
+* **No Typelense watermark**
+* Limited AI model selection
+* Standard resolution
+* Monthly or yearly billing
+* **17% discount** with yearly billing
+
+### Pro <small>(Most popular)</small>
+
+* **Monthly credits** based on package (20–500+)
+* Everything in **Starter**, plus:
+
+  * Access to **all AI models**
+  * Access to **all backgrounds**
+  * **2K** output resolution
+* Monthly or yearly billing
+* **17% discount** with yearly billing
+
+### Advanced / Business
+
+* **Monthly credits** based on package (20–500+)
+* Everything in **Pro**, plus:
+
+  * **4K** output resolution
+  * **3 revisions per credit**
+  * **Priority support**
+* Monthly or yearly billing
+* **17% discount** with yearly billing
+
+---
+
+## Available paid plans
+
+Typelense uses **dynamic credit-based pricing** with Stripe:
+
+* **Credit range:** 20 → 500+ credits / month
+* **Billing cycles:** Monthly or Yearly (17% discount)
+* **Tiers:** Starter, Pro, Advanced
+
+### Sample pricing (Monthly)
+
+| Credits |    Starter    |      Pro      |    Advanced   |
+| ------: | :-----------: | :-----------: | :-----------: |
+|      20 |      €22      |      €25      |      €30      |
+|      30 |      €33      |      €35      |      €40      |
+|      50 |      €55      |      €58      |      €65      |
+|      75 |     €22\*     |      €80      |      €95      |
+|     100 |     €22\*     |      €100     |      €120     |
+|     150 |     €22\*     |      €150     |      €180     |
+|     200 |     €22\*     |      €196     |      €236     |
+|     300 |     €22\*     |      €288     |      €348     |
+|    500+ | Talk to Sales | Talk to Sales | Talk to Sales |
+
+\*Starter plan has limitations above 50 credits and will display **“Talk to Sales.”**
+
+### Sample pricing (Yearly — shown as effective per month)
+
+| Credits |    Starter    |      Pro      |    Advanced   |
+| ------: | :-----------: | :-----------: | :-----------: |
+|      20 |      €18      |      €21      |      €25      |
+|      30 |      €28      |      €29      |      €33      |
+|      50 |      €46      |      €46      |      €54      |
+|      75 |     €18\*     |      €67      |      €79      |
+|     100 |     €18\*     |      €83      |      €100     |
+|     150 |     €18\*     |      €125     |      €150     |
+|     200 |     €18\*     |      €163     |      €197     |
+|     300 |     €18\*     |      €240     |      €290     |
+|    500+ | Talk to Sales | Talk to Sales | Talk to Sales |
+
+\*Yearly billing provides a **17%** discount and **front-loads credits** for the term.
+
+---
+
+## Credit system
+
+### Allocation
+
+* **Free users:** 8 credits at signup, **no refills**
+* **Subscribers:** monthly allocation based on plan
+* **Rollover:** **unlimited** credit rollover (as shown in UI)
+* **One-time packages:** 150–300 extra credits available (€299–€540)
+
+### Usage
+
+* **1 credit = 1 AI-generated fashion photo**
+* Credits are deducted automatically on generation
+* System checks balance before processing
+* If credits are insufficient → **upgrade prompt**
+
+### Tracking
+
+Credits are stored in the `profiles` table:
+
+* `credits_total` — total available
+* `credits_used` — consumed to date
+
+Computed in real time: `credits_remaining = credits_total - credits_used`
+
+### Display
+
+* **Sidebar widget:** remaining credits + progress bar
+* **Upgrade page:** credit **slider** (20–500+)
+* **Admin dashboard:** usage analytics & aggregates
+
+---
+
+## Billing & Stripe
+
+### Subscription management
+
+* **Processor:** Stripe Checkout Sessions
+* **Products:** configured in `stripe_products`
+* **Prices:** dynamic via `stripe_prices`
+* **Customer Portal:** self-service upgrades, downgrades, payment methods
+
+### Billing cycles
+
+* **Monthly:** standard recurring charges
+* **Yearly:** 17% discount, **all credits upfront**
+* **Proration:** plan changes are **prorated**
+
+### Refunds
+
+* **14-day refund** window for subscriptions
+* Custom **enterprise** agreements available for high-volume users
+
+---
+
+## User experience flow
+
+<Steps>
+  <Step title="New user">
+    Receives <strong>8 free credits</strong>. Watermarked output; limited models; standard resolution.
+  </Step>
+  <Step title="Monitor credits">
+    Sidebar widget shows <strong>credits remaining</strong> and status color.
+  </Step>
+  <Step title="Low balance">
+    Automatic <strong>upgrade prompts</strong> with plan comparison.
+  </Step>
+  <Step title="Select plan">
+    Interactive slider (20–500+), monthly/yearly toggle, and most-popular highlight.
+  </Step>
+  <Step title="Checkout">
+    Stripe Checkout session → successful payment → <strong>instant credit allocation</strong>.
+  </Step>
+</Steps>
+
+---
+
+## Feature access control
+
+* **Watermark removal:** all paid plans
+* **AI model access:** Starter (limited), **Pro/Advanced (all)**
+* **Resolution:** Starter (Standard), **Pro (2K)**, **Advanced (4K)**
+* **Backgrounds:** Starter (limited), **Pro/Advanced (all)**
+* **Revisions:** **Advanced** includes **3 revisions per credit**
+
+---
+
+## Admin capabilities
+
+* **User management:** view balances and plan types
+* **Pricing control:** manage Stripe products/prices
+* **Credit adjustments:** manual grants/deductions
+* **Subscription monitoring:** active plans, churn, usage patterns
+
+---
+
+## Upgrade experience
+
+* **Credit slider:** 20 → 500+ with real-time pricing
+* **Monthly ↔ Yearly toggle:** shows effective discount & totals
+* **Most popular plan:** **Pro** is visually highlighted
+* **High-volume:** **“Talk to Sales”** for 500+ credits & enterprise
+
+---
+
+## Key differentiators
+
+* **Flexible credits:** pay for what you use, **unlimited rollover**, optional top-ups
+* **Tiered features:** clear progression (Starter → Pro → Advanced) with **resolution scaling** (Standard → 2K → 4K)
+* **Stripe-powered billing:** secure payments, self-service portal, prorated changes, global payments
+
+---
+
+Need a bespoke plan, SSO/SSO, or dedicated support? Contact **[sales@typelense.io](mailto:sales@typelense.io)** for enterprise pricing.

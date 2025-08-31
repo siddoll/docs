@@ -6,12 +6,9 @@
     "primary": "#4D43FE",
     "light": "#07C983",
     "dark": "#15803D"
-  },
-  }
   "modeToggle": {
-  "default": "light",
-  "isHidden": true
-  }
+    "default": "light",
+    "isHidden": true
   },
   "favicon": "/typelense_favicon_white.svg",
   "navigation": {
@@ -23,8 +20,9 @@
             "group": "Get Started",
             "pages": [
               "introduction",
-              "quickstart",
-              "development"
+              "plansandcredits",
+              "faq",
+              "gettingstarted"
             ]
           }
         ]

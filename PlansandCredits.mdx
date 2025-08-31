@@ -61,42 +61,18 @@ Typelense uses **dynamic credit-based pricing** with Stripe:
 - System checks balance before processing
 - If credits are insufficient → **upgrade prompt**
 
-### Tracking
-
-Credits are stored in the `profiles` table:
-
-- `credits_total` — total available
-- `credits_used` — consumed to date
-
-Computed in real time: `credits_remaining = credits_total - credits_used`
-
 ### Display
 
 - **Sidebar widget:** remaining credits \+ progress bar
 - **Upgrade page:** credit **slider** (20–500\+)
-- **Admin dashboard:** usage analytics & aggregates
 
 ---
-
-## Billing & Stripe
-
-### Subscription management
-
-- **Processor:** Stripe Checkout Sessions
-- **Products:** configured in `stripe_products`
-- **Prices:** dynamic via `stripe_prices`
-- **Customer Portal:** self-service upgrades, downgrades, payment methods
 
 ### Billing cycles
 
 - **Monthly:** standard recurring charges
 - **Yearly:** 17% discount, **all credits upfront**
 - **Proration:** plan changes are **prorated**
-
-### Refunds
-
-- **14-day refund** window for subscriptions
-- Custom **enterprise** agreements available for high-volume users
 
 ---
 
@@ -106,25 +82,19 @@ Computed in real time: `credits_remaining = credits_total - credits_used`
   <Step title="New user">
     Receives 8 free credits
 
-    . Watermarked output; limited models; standard resolution.
+    Watermarked output; limited models; standard resolution.
   </Step>
   <Step title="Monitor credits">
-    Sidebar widget shows credits remaining
-
-     and status color.
+    Sidebar widget shows credits remaining and status color.
   </Step>
   <Step title="Low balance">
-    Automatic upgrade prompts
-
-     with plan comparison.
+    Automatic upgrade prompts with plan comparison.
   </Step>
   <Step title="Select plan">
     Interactive slider (20–500\+), monthly/yearly toggle, and most-popular highlight.
   </Step>
   <Step title="Checkout">
     Stripe Checkout session → successful payment → instant credit allocation
-
-    .
   </Step>
 </Steps>
 
@@ -136,31 +106,12 @@ Computed in real time: `credits_remaining = credits_total - credits_used`
 - **AI model access:** Starter (limited), **Pro/Advanced (all)**
 - **Resolution:** Starter (Standard), **Pro (2K)**, **Advanced (4K)**
 - **Backgrounds:** Starter (limited), **Pro/Advanced (all)**
-- **Revisions:** **Advanced** includes **3 revisions per credit**
-
----
-
-## Admin capabilities
-
-- **User management:** view balances and plan types
-- **Pricing control:** manage Stripe products/prices
-- **Credit adjustments:** manual grants/deductions
-- **Subscription monitoring:** active plans, churn, usage patterns
-
----
-
-## Upgrade experience
-
-- **Credit slider:** 20 → 500\+ with real-time pricing
-- **Monthly ↔ Yearly toggle:** shows effective discount & totals
-- **Most popular plan:** **Pro** is visually highlighted
-- **High-volume:** **“Talk to Sales”** for 500\+ credits & enterprise
 
 ---
 
 ## Key differentiators
 
-- **Flexible credits:** pay for what you use, **unlimited rollover**, optional top-ups
+- **Flexible credits:** pay for what you use, optional top-ups
 - **Tiered features:** clear progression (Starter → Pro → Advanced) with **resolution scaling** (Standard → 2K → 4K)
 - **Stripe-powered billing:** secure payments, self-service portal, prorated changes, global payments
 

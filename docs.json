@@ -60,17 +60,17 @@
         {
           "anchor": "Announcements",
           "href": "https://typelense.io/",
-          "icon": "book-open-cover"
+          "icon": "newspaper"
         },
         {
           "anchor": "Status",
           "href": "https://status.typelense.io/",
-          "icon": "slack"
+          "icon": "status"
         },
         {
           "anchor": "Feature Requests",
           "href": "https://app.typelense.io/feature-requests",
-          "icon": "newspaper"
+          "icon": "rocket"
         }
       ]
     }

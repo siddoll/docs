@@ -8,6 +8,10 @@
     "dark": "#15803D"
   },
   "favicon": "/typelense_favicon_white.svg",
+  "modeToggle": {
+    "default": "light",
+    "isHidden": true
+  },
   "navigation": {
     "tabs": [
       {

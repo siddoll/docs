@@ -63,7 +63,8 @@
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://app.typelense.io"
+      "href": "https://app.typelense.io",
+      "color": "#4D43FE"
     }
   },
   "footer": {
